@@ -70,7 +70,7 @@ body {
   font-weight: 300;
 }
 
-.nav ul li a, .btn a, form input.btn-submit, .btn-edit {
+.nav ul li a, .btn a, form input.btn-submit, .btn-edit, .btn-new {
   background: rgba(255,255,255,0.25);
   color: #282828;
   display: block;
@@ -81,7 +81,7 @@ body {
   transition: background 1s;
 }
 
-.nav ul li a:hover, .article a h2:hover, .btn a:hover, form input.btn-submit:hover, .btn-edit:hover {
+.nav ul li a:hover, .article a h2:hover, .btn a:hover, form input.btn-submit:hover, .btn-edit:hover, .btn-new:hover {
   background: rgba(255,255,255,1);
   cursor: pointer;
   transition: background 1s;
@@ -151,7 +151,7 @@ body {
 }
 
 /*      FORMS     */
-.login .container, .signup .container, .update-article .container {
+.login .container, .signup .container, .update-article, .new-article, .container {
   width: 600px;
   margin: 0 50px 50px;
 }

@@ -10,7 +10,12 @@
       <% end %>
       <p class="author">by <%= article.author %></p>
       <p class="article_content"><%= simple_format(truncate(article.body , :length => 140), class: 'article_content') %></p>
+
     </div>
     <% end %>
+
+    <div class="article">
+    <%= link_to "Create new article", new_article_path(), :class => "btn-new" %>
+    </div>
   </div>
 </div>
