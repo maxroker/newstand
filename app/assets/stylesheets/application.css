@@ -70,7 +70,7 @@ body {
   font-weight: 300;
 }
 
-.nav ul li a, .btn a, form input.btn-submit {
+.nav ul li a, .btn a, form input.btn-submit, .btn-edit {
   background: rgba(255,255,255,0.25);
   color: #282828;
   display: block;
@@ -81,7 +81,7 @@ body {
   transition: background 1s;
 }
 
-.nav ul li a:hover, .article a h2:hover, .btn a:hover, form input.btn-submit:hover {
+.nav ul li a:hover, .article a h2:hover, .btn a:hover, form input.btn-submit:hover, .btn-edit:hover {
   background: rgba(255,255,255,1);
   cursor: pointer;
   transition: background 1s;
@@ -135,6 +135,10 @@ body {
   display: block;
   font-weight: 300;
   margin: 0 0 4px;
+}
+
+.btn-edit {
+  width: 50px;
 }
 
 .edit {

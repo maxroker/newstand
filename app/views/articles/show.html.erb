@@ -4,6 +4,9 @@
     <h2><%= @article.title %></h2>
     <p class="author">by <%= @article.author %></p>
     <p class="article_content"><%= simple_format(@article.body, class: 'article_content') %></p>
+    <br/>
+
+    <%= link_to 'Edit', edit_article_path(), :class => "btn-edit" %>
 
     <!-- Your code here -->
 
