@@ -9,7 +9,7 @@
         <h2><%= article.title %></h2>
       <% end %>
       <p class="author">by <%= article.author %></p>
-      <p class="article_content"><%= truncate(article.body , :length => 140) %></p>
+      <p class="article_content"><%= simple_format(truncate(article.body , :length => 140), class: 'article_content') %></p>
     </div>
     <% end %>
   </div>
