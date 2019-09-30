@@ -27,7 +27,7 @@ body {
   background-size: cover;
   background-color: #425167;
   color: #fff;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto Slab', 'Roboto', serif;
   height: 100%;
   width: 100%;
 }
