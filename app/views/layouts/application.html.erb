@@ -23,13 +23,13 @@
           <% if current_user %> 
             <ul> 
               <li><%= current_user.email %></li> 
-              <li><%= link_to "Profile", '/profile' %></li>
-              <li><%= link_to "Log out", logout_path, :method => "delete" %></li> 
+              <li><%= link_to "Profile", '/profile', :class => 'btn' %></li>
+              <li><%= link_to "Log out", logout_path, :method => "delete", :class => 'btn' %></li> 
             </ul> 
           <% else %> 
             <ul> 
-              <li><%= link_to "Login", '/login' %></a></li> 
-              <li><%= link_to "Signup", '/signup' %></a></li> 
+              <li><%= link_to "Login", '/login', :class => 'btn' %></a></li> 
+              <li><%= link_to "Signup", '/signup', :class => 'btn' %></a></li> 
             </ul> 
           <% end %> 
           

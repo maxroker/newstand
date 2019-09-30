@@ -22,11 +22,22 @@
 }
 
 body {
-  background: #00c8c8;
+  background-image: url('https://images.unsplash.com/photo-1504711331083-9c895941bf81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+  /*background-repeat: no-repeat;*/
+  background-size: cover;
+  background-color: #425167;
   color: #fff;
   font-family: 'Roboto Slab', serif;
   height: 100%;
   width: 100%;
+}
+
+.container {
+  width: 600px;
+  background-color: DarkSlateGray;
+  margin: 0 50px;
+  padding: 50px;
+  opacity: 0.9;
 }
 
 .dark {
@@ -41,10 +52,10 @@ body {
 }
 
 .header h1 {
-  font-size: 72px;
-  height: 200px;
-  line-height: 200px;
-  margin: 0 50px 0;
+  font-size: 96px;
+  height: 100px;
+  margin: 0 50px;
+  padding: 0;
 }
 
 .header a {
@@ -71,20 +82,21 @@ body {
 }
 
 .nav ul li a, .btn a, form input.btn-submit, .btn-edit, .btn-new {
-  background: rgba(255,255,255,0.25);
-  color: #282828;
+  background-color: DarkSlateGray;
+  color: white;
+  border: 1px solid white;
   display: block;
   min-width: 80px;
   padding: 6px 20px;
   text-align: center;
   text-decoration: none;
-  transition: background 1s;
+  transition: background 0.5s;
 }
 
 .nav ul li a:hover, .article a h2:hover, .btn a:hover, form input.btn-submit:hover, .btn-edit:hover, .btn-new:hover {
-  background: rgba(255,255,255,1);
+  background-color: #293939;
+  color: white;
   cursor: pointer;
-  transition: background 1s;
 }
 
 #email {
@@ -94,10 +106,8 @@ body {
 /*    ARTICLES    */
 
 .article {
-  border-bottom: 1px solid #282828;
-  margin: 0 50px 50px;
-  padding: 0 0 50px;
   width: 600px;
+  margin: 10px 0;
 }
 
 .article a {
@@ -137,9 +147,7 @@ body {
   margin: 0 0 4px;
 }
 
-.btn-edit {
-  width: 50px;
-}
+
 
 .edit {
   margin: 50px 0 0;
@@ -151,9 +159,11 @@ body {
 }
 
 /*      FORMS     */
-.login .container, .signup .container, .update-article, .new-article, .container {
-  width: 600px;
+.login .container, .signup .container, .update-article, .new-article, {
+
   margin: 0 50px 50px;
+  padding: 0 0 50px;
+  width: 500px;
 }
 
 form input, form textarea {
