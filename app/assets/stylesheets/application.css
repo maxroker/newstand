@@ -4,20 +4,29 @@
   padding: 0;
 }
 
-body {
-  background-image: url('https://images.unsplash.com/photo-1504711331083-9c895941bf81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
-  background-repeat: no-repeat;
-  background-size: 100vw 100vh;
-  background-color: #425167;
-  color: #fff;
-  font-family: 'Roboto Slab', 'Roboto', serif;
-  height: 100vh;
-  width: 100%;
+html {
+  height: 100%;
 }
 
-.container {
-  background-color: DarkSlateGray;
-  opacity: 0.9;
+body {
+  background-image: url(https://images.unsplash.com/photo-1552627716-7d1faa4282f1),
+                    url('https://images.unsplash.com/photo-1521716250348-c4ae4ff1df43'),
+                    url(https://images.unsplash.com/photo-1547105518-ef5c73a71c6b), 
+                    url(https://images.unsplash.com/photo-1504711331083-9c895941bf81);
+  background-repeat: repeat;
+  background-size: cover;
+  color: #fff;
+  font-family: 'Roboto Slab', 'Roboto', serif;
+  min-height: 100%;
+}
+
+main {
+  position: relative;
+  top: 100px;
+}
+
+main .container {
+  opacity: 0.8;
 }
 
 
@@ -38,7 +47,7 @@ header .end {
 }
 
 header h1 {
-  /*border: 1px solid yellow;*/
+  text-decoration: none;
   font-size: 96px;
   height: 100px;
   margin: 0 50px;
@@ -47,16 +56,18 @@ header h1 {
 }
 
 header a {
+  color: white;
+}
+
+header a:hover {
   text-decoration: none;
-  color: #fff;
+  color: #DFDFDF;
 }
 
 header .dark {
   font-size: 120px;
   color: #282828;
 }
-
-
 
 header .nav {
   height: 40px;
@@ -88,20 +99,25 @@ header li {
   color: white;
 }
 
-/*#email {
-  margin: 0 20px;
-}*/
+
 
 /*    ARTICLES    */
 
-.article {
-  width: 600px;
-  margin: 10px 0;
+.container {
+  background-color: DarkSlateGray;
+  padding: 20px 50px;
+  margin-top: 10px;
 }
 
 .article a {
   text-decoration: none;
 }
+
+.article a h2:hover {
+  color: Gainsboro;
+  background-color: #293939;;
+}
+
 
 .article a h2 {
   background: rgba(255,255,255,0.25);
@@ -110,7 +126,7 @@ header li {
   font-size: 40px;
   line-height: 50px;
   text-transform: capitalize;
-  transition: background 1s;
+  transition: background 0.5s;
 }
 
 .article h2 {
@@ -130,13 +146,10 @@ header li {
   line-height: 24px;
 }
 
-/*.btn a {
-  display: block;
-  font-weight: 300;
-  margin: 0 0 4px;
+.article .save, .article .new, .edit {
+  text-transform: capitalize;
+  font-size: 30px;
 }
-*/
-
 
 .edit {
   margin: 50px 0 0;
@@ -148,43 +161,30 @@ header li {
 }
 
 /*      FORMS     */
-.login .container, .signup .container, .update-article, .new-article, {
+.login, .signup {
+  max-width: 500px;
+  padding: 50px;
+}
 
-  margin: 0 50px 50px;
-  padding: 0 0 50px;
-  width: 500px;
+.login .btn, .signup .btn, .create {
+  font-size: 24px;
+  margin-top: 20px;
 }
 
 form input, form textarea {
-  border: 0;
-  border-bottom: 2px solid transparent;
   font-family: 'Roboto Slab', serif;
   font-size: 24px;
-  font-weight: 300; 
+  font-weight: 300;
   margin: 0 0 4px;
   padding: 6px 20px;
-  transition: border-bottom 1s;
-  width: calc(100% - 40px);
-}
-
-form input:focus, form textarea:focus {
-  border-bottom: 2px solid #ffff00;
-  box-shadow: 0 0;
-  outline: 0;
-  transition: border-bottom 1s;
-}
-
-form input.btn-submit {
   width: 100%;
 }
 
-form input.btn-submit:focus {
-  border-bottom: 2px solid transparent;
-}
+form textarea:focus {
+  min-height: 300px;
+  }
 
-form textarea {
-  min-height: 400px;
-}
+
 
 /**********    
   MEDIA QUERIES    
@@ -197,7 +197,6 @@ form textarea {
     margin-top: 0;
     margin-bottom: 10px;
   }
-
 
 }
 
@@ -215,36 +214,10 @@ form textarea {
     max-width: 100%;
   }
 
-}
-
-@media screen and (max-width: 520px) {
-  /*    HEADER    */
-  .header {
-    height: 180px;
+  main {
+    top: 150px;
   }
 
-  .header h1 {
-    font-size: 40px;
-    height: 180px;
-    line-height: 180px;
-    margin: 0 30px 0;
-  }
-
-  .nav ul {
-    font-size: 13px;
-    right: 15px;
-    top: 15px;
-  }
-
-  .nav ul li a {
-    min-width: 45px;
-  }
-
-  /*    ARTICLES    */
-  .article, .login .container, .signup .container, .update-article .container {
-    margin: 0 30px 50px;
-    width: 340px;
-  }
 }
 
 

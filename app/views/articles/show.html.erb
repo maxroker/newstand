@@ -1,15 +1,10 @@
-<div class="article">
-  <div class="container">
+<div class="container article">
     <p class="date"><%= @article.created_at.strftime('%b %d') %></p>
     <h2><%= @article.title %></h2>
     <p class="author">by <%= @article.author %></p>
     <p class="article_content"><%= simple_format(@article.body, class: 'article_content') %></p>
     <br/>
 
-    <%= link_to 'Edit', edit_article_path(), :class => "btn-edit" %>
+    <%= link_to 'Edit', edit_article_path(), :class => "btn edit" %>
 
-    <!-- Your code here -->
-
-    
-  </div>
 </div>

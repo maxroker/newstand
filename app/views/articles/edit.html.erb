@@ -1,12 +1,12 @@
 <div class="update-article">
-  <div class="container">
+  <div class="container article">
 
     <%= form_for(@article) do |f| %>    
       <%= f.text_field :title %>
       <%= f.text_field :author %>
       <%= f.text_area :body %>
 
-      <%= f.submit "Save", :class => "btn-submit" %>
+      <%= f.submit "Save", :class => "btn save" %>
     <% end %>
 
   </div>
