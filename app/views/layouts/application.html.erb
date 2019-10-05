@@ -2,7 +2,10 @@
 <html>
   <head>
     <title>Newstand</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto:100,400,500,700&display=swap" rel="stylesheet">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,33 +15,42 @@
 
   <body>
     
-    <div class="header">
-      <div class="container">
-        <%= link_to(root_path) do %>
-          <h1><span class="dark">n</span>ewstand</h1>
-        <% end %>
+    <header>
+      <div class="container-fluid">
+        <div class="row">
 
-          
-        <div class="nav pull-right">
-          <% if current_user %> 
-            <ul> 
-              <li><%= current_user.email %></li> 
-              <li><%= link_to "Profile", '/profile', :class => 'btn' %></li>
-              <li><%= link_to "Log out", logout_path, :method => "delete", :class => 'btn' %></li> 
-            </ul> 
-          <% else %> 
-            <ul> 
-              <li><%= link_to "Login", '/login', :class => 'btn' %></a></li> 
-              <li><%= link_to "Signup", '/signup', :class => 'btn' %></a></li> 
-            </ul> 
-          <% end %> 
-          
+          <div class="col-md-6 col-lg-8">
+            <%= link_to(root_path) do %>
+              <h1><span class="dark">n</span>ewstand</h1>
+            <% end %>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="nav">
+              <% if current_user %> 
+                <ul> 
+                  <li class="block"><%= current_user.email %></li> 
+                  <li><%= link_to "Profile", '/profile', :class => 'btn' %></li>
+                  <li><%= link_to "Log out", logout_path, :method => "delete", :class => 'btn' %></li> 
+                </ul> 
+              <% else %> 
+                <ul> 
+                  <li><%= link_to "Login", '/login', :class => 'btn' %></li> 
+                  <li><%= link_to "Signup", '/signup', :class => 'btn' %></li> 
+                </ul> 
+              <% end %>
+            </div>
+          </div>
         </div>
+               
       </div>
-    </div>
+    </header>
 
+    <main>
 
-    <%= yield %>
+      <%= yield %>
+
+    </main>
 
   </body>
 </html>
