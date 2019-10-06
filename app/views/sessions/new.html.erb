@@ -1,4 +1,7 @@
 <div class="container login">
+
+	<h2>Use "signup" button to create your account</h2></br>
+
 	<%= form_for(:session, url: login_path) do |f| %>
 		<%= f.email_field :email, :placeholder => "Email", :maxlength => 255 %>
 		<%= f.password_field :password, :placeholder => "Password", :maxlength => 255 %>
