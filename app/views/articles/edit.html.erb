@@ -2,9 +2,9 @@
   <div class="container article">
 
     <%= form_for(@article) do |f| %>    
-      <%= f.text_field :title %>
-      <%= f.text_field :author %>
-      <%= f.text_area :body %>
+      <%= f.text_field :title , :maxlength => 255 %>
+      <%= f.text_field :author, :maxlength => 255 %>
+      <%= f.text_area :body , :maxlength => 10000 %>
 
       <%= f.submit "Save", :class => "btn save" %>
     <% end %>

@@ -9,26 +9,15 @@ html {
 }
 
 body {
-  background-image: url(https://images.unsplash.com/photo-1552627716-7d1faa4282f1),
-                    url('https://images.unsplash.com/photo-1521716250348-c4ae4ff1df43'),
-                    url(https://images.unsplash.com/photo-1547105518-ef5c73a71c6b), 
-                    url(https://images.unsplash.com/photo-1504711331083-9c895941bf81);
+  background-image: url(https://images.unsplash.com/photo-1552627716-7d1faa4282f1);
   background-repeat: repeat;
   background-size: cover;
   color: #fff;
   font-family: 'Roboto Slab', 'Roboto', serif;
   min-height: 100%;
-}
+  font-size: 20px;
 
-main {
-  position: relative;
-  top: 100px;
 }
-
-main .container {
-  opacity: 0.8;
-}
-
 
 
 /*    HEADER    */
@@ -82,6 +71,71 @@ header li {
   display: inline-block;
 }
 
+
+/*    MAIN    */
+
+main {
+  position: relative;
+  top: 100px;
+}
+
+main .container {
+  opacity: 0.8;
+}
+
+main .article_content {
+  line-height: 1.7;
+}
+
+
+/*    ARTICLES    */
+
+.container {
+  background-color: DarkSlateGray;
+  padding: 20px 50px;
+  margin-top: 10px;
+}
+
+.article a {
+  text-decoration: none;
+}
+
+
+.article a h2 {
+  background: rgba(255,255,255,0.25);
+  color: white;
+  display: inline;
+  font-size: 40px;
+  line-height: 50px;
+  text-transform: capitalize;
+  transition: background 0.2s;
+}
+
+.article a h2:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+  .article h2 {
+    color: white;
+    background-color: rgba(255,255,255,0.25);
+    font-size: 40px;
+    line-height: 50px;
+    text-transform: capitalize;
+  }
+
+.author, .date, .user_email {
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+.article_content {
+  font-weight: 300;
+  line-height: 24px;
+}
+
+
+
+/*   Buttons   */
 .btn {
   background-color: DarkSlateGray;
   color: white;
@@ -99,53 +153,6 @@ header li {
   color: white;
 }
 
-
-
-/*    ARTICLES    */
-
-.container {
-  background-color: DarkSlateGray;
-  padding: 20px 50px;
-  margin-top: 10px;
-}
-
-.article a {
-  text-decoration: none;
-}
-
-.article a h2:hover {
-  color: Gainsboro;
-  background-color: #293939;;
-}
-
-
-.article a h2 {
-  background: rgba(255,255,255,0.25);
-  color: #282828;
-  display: inline;
-  font-size: 40px;
-  line-height: 50px;
-  text-transform: capitalize;
-  transition: background 0.5s;
-}
-
-.article h2 {
-  color: #282828;
-  font-size: 40px;
-  line-height: 50px;
-  text-transform: capitalize;
-}
-
-.author, .date, .user_email {
-  font-weight: 300;
-  margin: 10px 0;
-}
-
-.article_content {
-  font-weight: 300;
-  line-height: 24px;
-}
-
 .article .save, .article .new, .edit {
   text-transform: capitalize;
   font-size: 30px;
@@ -160,7 +167,6 @@ header li {
   color: #fff;
 }
 
-/*      FORMS     */
 .login, .signup {
   max-width: 500px;
   padding: 50px;
@@ -170,6 +176,9 @@ header li {
   font-size: 24px;
   margin-top: 20px;
 }
+
+
+/*      FORMS     */
 
 form input, form textarea {
   font-family: 'Roboto Slab', serif;

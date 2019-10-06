@@ -2,10 +2,10 @@
 
 <%= form_for(@user) do |f| %>
 
-	<%= f.text_field :first_name, :placeholder => "First name" %><br />
-	<%= f.text_field :last_name, :placeholder => "Last name" %><br />
-	<%= f.email_field :email, :placeholder => "Email" %><br />
-	<%= f.password_field :password, :placeholder => "Password" %><br />
+	<%= f.text_field :first_name, :placeholder => "First name", :maxlength => 15 %><br />
+	<%= f.text_field :last_name, :placeholder => "Last name", :maxlength => 15 %><br />
+	<%= f.email_field :email, :placeholder => "Email", :maxlength => 128 %><br />
+	<%= f.password_field :password, :placeholder => "Password", :maxlength => 128 %><br />
 
 	<%= f.submit "Update", :class => "btn" %>
 
